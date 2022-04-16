@@ -1,6 +1,18 @@
-/** @type {import('next').NextConfig} */
-const nextConfig = {
-  reactStrictMode: true,
-}
+const relay = require('./relay.config.js');
 
-module.exports = nextConfig
+module.exports = {
+  compiler: {
+    relay: {
+      src: relay.src,
+      artifactDirectory: relay.artifactDirectory,
+    },
+    externalDir: true,
+  },
+  experimental: {
+    runtime: 'nodejs',
+    concurrentFeatures: true,
+  },
+  serverRuntimeConfig: {
+    projectRoot: __dirname,
+  },
+};
