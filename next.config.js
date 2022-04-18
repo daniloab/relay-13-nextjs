@@ -2,6 +2,7 @@ const relay = require('./relay.config.js');
 
 module.exports = {
   compiler: {
+    // https://nextjs.org/docs/advanced-features/compiler#relay
     relay: {
       src: relay.src,
       artifactDirectory: relay.artifactDirectory,
