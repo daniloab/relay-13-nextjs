@@ -8,7 +8,7 @@ type Props = {
 };
 
 const ErrorView = ({ error, retry = undefined }: Props) => {
-  const errorMessage = Array.isArray(error) ? error[0].message : error.message;
+  const errorMessage = Array.isArray(error) ? error[0].message : error?.message;
 
   return (
     <Stack align={'center'} spacing={2}>
