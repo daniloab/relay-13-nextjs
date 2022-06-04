@@ -4,7 +4,8 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "prebuild": "yarn run relay",
+    "build": "next build && next export",
     "start": "next start",
     "lint": "next lint",
     "relay": "relay-compiler"
